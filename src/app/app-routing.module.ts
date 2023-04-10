@@ -11,6 +11,10 @@ const routes: Routes = [
     path:"",
     component: HomePagesComponent,
     loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
+  },
+  {
+    path:"**",
+    redirectTo:"tracks"
   }
 ];
 
